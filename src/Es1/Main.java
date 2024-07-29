@@ -1,10 +1,15 @@
 package Es1;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -15,7 +20,7 @@ public class Main {
             numRandom[i] = random.nextInt(1, 10);
         }
         System.out.println(Arrays.toString(numRandom));
-
+        logger.info(Arrays.toString(numRandom));
 
         while (true) {
             System.out.println("Scegli una posizione da 1 a 5");
@@ -53,6 +58,7 @@ public class Main {
                     break;
             }
             System.out.println(Arrays.toString(numRandom));
+            logger.info(Arrays.toString(numRandom));
         }
 
 
