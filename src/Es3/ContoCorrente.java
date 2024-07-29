@@ -20,7 +20,7 @@ public class ContoCorrente {
             else saldo = saldo - x - 0.50;
 
         } catch (Exception e) {
-            throw new BancaException("Il conto è in rosso");
+            System.out.println("Il conto è in rosso");
         }
         nMovimenti++;
     }
@@ -45,5 +45,13 @@ public class ContoCorrente {
         return saldo;
     }
 
-
+    @Override
+    public String toString() {
+        return "ContoCorrente{" +
+                "maxMovimenti=" + maxMovimenti +
+                ", titolare='" + titolare + '\'' +
+                ", nMovimenti=" + nMovimenti +
+                ", saldo=" + saldo +
+                '}';
+    }
 }

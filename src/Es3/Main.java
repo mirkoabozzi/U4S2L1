@@ -14,12 +14,14 @@ public class Main {
         ContoCorrente contoCorrente = new ContoCorrente("Mirko", 20000);
         ContoOnLine contoOnLine = new ContoOnLine("Mirko", 1000, 100);
 
-        System.out.println("Quanto vuoi prelevare?");
-        int prelievo = scanner.nextInt();
+        while (true) {
 
-        contoOnLine.preleva(prelievo);
-        System.out.println(contoOnLine.getSaldo());
+            System.out.println("Quanto vuoi prelevare?");
+            int prelievo = scanner.nextInt();
 
+            contoCorrente.preleva(prelievo);
+            logger.info(contoCorrente.toString());
+        }
 
     }
 }

@@ -24,7 +24,7 @@ public class ContoOnLine extends ContoCorrente {
                 super.preleva(x);
             }
         } catch (Exception e) {
-            throw new BancaException(e.getMessage());
+            System.out.println(e.getMessage());
         }
 
     }
