@@ -14,14 +14,28 @@ public class Main {
         ContoCorrente contoCorrente = new ContoCorrente("Mirko", 20000);
         ContoOnLine contoOnLine = new ContoOnLine("Mirko", 1000, 100);
 
-        while (true) {
+//        while (true) {
+//            System.out.println("Quanto vuoi prelevare?");
+//            int prelievo = scanner.nextInt();
+//            try {
+//                contoOnLine.preleva(prelievo);
+//                logger.info(contoOnLine.toString());
+//
+//            } catch (BancaException e) {
+//                logger.info("Errore nel prelievo " + e);
+//            }
+//        }
 
+        while (true) {
             System.out.println("Quanto vuoi prelevare?");
             int prelievo = scanner.nextInt();
+            try {
+                contoCorrente.preleva(prelievo);
+                logger.info(contoCorrente.toString());
 
-            contoOnLine.preleva(prelievo);
-            logger.info(contoOnLine.toString());
+            } catch (BancaException e) {
+                logger.info("Errore nel prelievo " + e);
+            }
         }
-
     }
 }
