@@ -19,8 +19,8 @@ public class Main {
             System.out.println("Quanto vuoi prelevare?");
             int prelievo = scanner.nextInt();
 
-            contoCorrente.preleva(prelievo);
-            logger.info(contoCorrente.toString());
+            contoOnLine.preleva(prelievo);
+            logger.info(contoOnLine.toString());
         }
 
     }
